@@ -1,1 +1,146 @@
-/* Monte sua estilização aqui */
+main{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #212529;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+.title > img{
+    width: 7.875rem;
+    height: 3.125rem;
+    margin-top: 2rem;
+    margin-bottom: 2.25rem;
+}
+
+main > h1{
+    font-size: var(--title-1);
+    color: var(--title-text-color);
+    font-weight: 500;
+    margin-bottom: 4.625rem;
+}
+
+.pokemonList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+
+    overflow-y: auto;
+}
+
+#loading{
+    color: var(--loading-text-color);
+    margin-top: 4.625rem;
+    font-weight: 500;
+    font-size: var(--text-1);
+}
+
+#searchBar{
+    display: none;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 90%;
+    margin-bottom: 2.375rem;
+}
+
+#searchBar > input{
+    background-color: var(--card-bg-color-1);
+    height: 60px;
+    width: 70%;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: none;
+}
+
+#searchBar > ::-webkit-input-placeholder{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #7C8B99;
+}
+
+#searchBar > button{
+    height: 3.75rem;
+    width: 23%;
+    background-color: var(--search-bg-color-1);
+    border-radius: 0.5rem;
+    border: none;
+    position: relative;
+}
+
+#searchBar > button > img {
+    position: absolute;
+    top: 1.25rem;
+    left: 2rem;
+}
+
+.hidden{
+    display: none;
+}
+
+li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    background-color: var(--card-bg-color-1);
+    width: 90%;
+    height: 3.75rem;
+    border-radius: 0.5rem;
+    padding: 1rem; 
+    gap: 1.75rem;
+    margin-bottom: 1.75rem;
+}
+
+li > img{
+    width: 3.75rem;
+    height: 3.75rem;
+}
+
+li > h3{
+    color: var(--list-text-color);
+    font-weight: 500;
+    font-size: var(--text-1);
+}
+
+@media(min-width: 900px){
+    .title{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0rem 14.875rem ;
+        padding-top: 2rem;
+    }
+
+    .title > img{
+        margin-top: 0;
+    }
+
+    .pokemonList{
+        padding: 0rem 14.875rem;
+    }
+
+    li{
+        width: 100%;
+    }
+
+    #searchBar{
+        max-width: 370px;
+    }
+
+    main > h1{
+        padding-top: 3.5rem;
+    }
+}
